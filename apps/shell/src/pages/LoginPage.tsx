@@ -1,10 +1,13 @@
 import NameForm from '../components/NameForm'
+import './index.css'
 
 const LoginPage = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-semibold mb-6 text-center">Bem-vindo!</h1>
+    <div className="login-wrapper">
+      <div className="login-container">
+        <h1 className="login-title">
+          Olá, Seja Bem-vindo!
+        </h1>
         <NameForm />
       </div>
     </div>

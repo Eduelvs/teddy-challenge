@@ -1,0 +1,28 @@
+.name-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name-form-input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.name-form-button {
+  background: rgb(236,103,36);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.name-form-button:hover {
+  background: #ff9800;
+}

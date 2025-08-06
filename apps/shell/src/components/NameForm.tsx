@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './NameForm.css'
 import { useNavigate } from 'react-router-dom'
 
 const NameForm = () => {
@@ -13,17 +14,17 @@ const NameForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="name-form">
       <input
         type="text"
         placeholder="Digite seu nome"
-        className="border border-gray-300 rounded px-4 py-2"
+        className="name-form-input"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <button
         type="submit"
-        className="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700"
+        className="name-form-button"
       >
         Entrar
       </button>

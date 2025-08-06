@@ -1,0 +1,35 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Centraliza vertical e horizontalmente */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container do formulário */
+.login-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+}
+
+/* Título estilizado */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1f2937;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
