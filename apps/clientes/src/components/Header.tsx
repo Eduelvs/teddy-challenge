@@ -3,7 +3,7 @@ import './Header.css'
 import teddyLogo from '../../public/logo.png'
 import Sidebar from './Sidebar'
 
-const HeaderWithSidebar = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleSidebar = () => {
@@ -37,4 +37,4 @@ const HeaderWithSidebar = () => {
   )
 }
 
-export default HeaderWithSidebar
+export default Header
