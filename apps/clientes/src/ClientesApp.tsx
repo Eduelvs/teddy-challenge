@@ -1,5 +1,13 @@
+import HeaderWithSidebar from './components/Header'
+import './index.css'
+
 const ClientesApp = () => {
-  return <div>Microfrontend de Clientes carregado com sucesso!</div>
+  return (
+    <div className="clientes-app">
+      <HeaderWithSidebar />
+      {/* Other components can be added here */}
+    </div>
+  )
 }
 
 export default ClientesApp
