@@ -1,3 +1,4 @@
+
 .clientes-container {
   padding-left: 12rem;
   padding-right: 12rem;
@@ -44,22 +45,19 @@
 }
 
 .card-actions {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
 .card-actions button {
+  padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.card-actions .danger {
-  color: red;
-}
 
 .clientes-footer {
   margin-top: 2rem;
@@ -69,9 +67,10 @@
 }
 
 .criar-btn {
+  width: 100%;
   padding: 0.5rem 1.5rem;
-  border: 1px solid orange;
-  color: orange;
+  border: 3px solid #f97316;
+  color: #f97316;
   background: transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -89,14 +88,22 @@
 
 .paginacao button {
   padding: 0.4rem 0.8rem;
-  border: 1px solid #ccc;
-  background: white;
+  background: transparent;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .paginacao button.active {
-  background: orange;
-  color: white;
-  border-color: orange;
+  background: #f97316;
+  color: rgb(0, 0, 0);
+}
+
+select {
+  border-radius: 8px; /* ou 999px se quiser estilo pílula */
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: white;
+  font-size: 14px;
+  /* Adicione outras propriedades conforme seu design */
 }
