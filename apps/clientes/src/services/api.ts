@@ -8,6 +8,6 @@ const api = axios.create({
 export const ClienteService = {
   listar: (limit = 100) => api.get(`/users?limit=${limit}`),
   criar: (data: any) => api.post('/users', data),
-  atualizar: (id: string, data: any) => api.put(`/users/${id}`, data),
+  atualizar: (id: string, data: any) => api.patch(`/users/${id}`, data),
   excluir: (id: string) => api.delete(`/users/${id}`),
 }
