@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import './NameForm.css'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import './NameForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const NameForm = () => {
-  const [name, setName] = useState('')
-  const navigate = useNavigate()
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!name.trim()) return
-    localStorage.setItem('username', name.trim())
-    navigate('/clientes')
-  }
+    e.preventDefault();
+    if (!name.trim()) return;
+    localStorage.setItem('username', name.trim());
+    navigate('/clientes');
+  };
 
   return (
     <form onSubmit={handleSubmit} className="name-form">
@@ -22,14 +22,11 @@ const NameForm = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button
-        type="submit"
-        className="name-form-button"
-      >
+      <button type="submit" className="name-form-button">
         Entrar
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default NameForm
+export default NameForm;

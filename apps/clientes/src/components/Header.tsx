@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import './Header.css'
-import teddyLogo from '../../public/logo.png'
-import Sidebar from './Sidebar'
+import { useState } from 'react';
+import './Header.css';
+import teddyLogo from '../../public/logo.png';
+import Sidebar from './Sidebar';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   // Detecta o pathname atual
-  const pathname = window.location.pathname
+  const pathname = window.location.pathname;
 
   const toggleSidebar = () => {
-    setIsOpen(prev => !prev)
-  }
+    setIsOpen((prev) => !prev);
+  };
 
   return (
     <>
-
       <header className="header">
         <button className="menu-button" onClick={toggleSidebar}>
           ☰
@@ -23,26 +22,17 @@ const Header = () => {
         <nav className="header-tabs">
           <ul>
             <li>
-              <a
-                href="/clientes"
-                className={pathname === '/clientes' ? 'active' : ''}
-              >
+              <a href="/clientes" className={pathname === '/clientes' ? 'active' : ''}>
                 Clientes
               </a>
             </li>
             <li>
-              <a
-                href="/selecionados"
-                className={pathname === '/selecionados' ? 'active' : ''}
-              >
+              <a href="/selecionados" className={pathname === '/selecionados' ? 'active' : ''}>
                 Clientes Selecionados
               </a>
             </li>
             <li>
-              <a
-                href="/"
-                className={pathname === '/' ? 'active' : ''}
-              >
+              <a href="/" className={pathname === '/' ? 'active' : ''}>
                 Sair
               </a>
             </li>
@@ -57,7 +47,7 @@ const Header = () => {
 
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

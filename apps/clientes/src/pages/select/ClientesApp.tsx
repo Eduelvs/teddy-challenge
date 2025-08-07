@@ -1,7 +1,6 @@
-import Header from '../../components/Header'
-import '../../index.css'
-import ClientesSelect from './ClientesSelect'
-
+import Header from '../../components/Header';
+import '../../index.css';
+import ClientesSelect from './ClientesSelect';
 
 const ClientesApp = () => {
   return (
@@ -9,7 +8,7 @@ const ClientesApp = () => {
       <Header />
       <ClientesSelect />
     </div>
-  )
-}
+  );
+};
 
-export default ClientesApp
+export default ClientesApp;

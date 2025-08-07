@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, #root {
+html,
+#root {
   height: 100%;
   font-family: Arial, sans-serif;
 }
@@ -31,5 +32,5 @@ html, #root {
   margin-bottom: 30px;
   text-align: center;
   color: #1f2937;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }

@@ -22,8 +22,9 @@ teddy-challenge/
 * TypeScript
 * pnpm workspaces
 * Axios
-* Zustand (estado global)
-* Docker (em breve)
+* Docker (para containerização)
+* Tailwind CSS
+* React Router DOM
 * Vercel (para deploy)
 * Conventional Commits
 

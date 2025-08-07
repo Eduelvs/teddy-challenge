@@ -1,11 +1,10 @@
-
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +14,7 @@
 .modal-content {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   padding: 2rem 2.5rem;
   min-width: 320px;
   max-width: 90vw;
@@ -52,8 +51,8 @@
   gap: 0.3rem;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="number"] {
+.modal-content input[type='text'],
+.modal-content input[type='number'] {
   padding: 0.5rem 0.75rem;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -108,19 +107,18 @@
     width: 90vw;
     padding: 1.5rem;
   }
-  
+
   .modal-content form {
     width: 100%;
   }
-  
+
   .modal-actions {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .modal-actions .salvar,
   .cancelar {
     width: 100%;
   }
-  
 }
