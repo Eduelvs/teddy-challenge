@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import CriarClienteModal from '../components/CreateClienteModal'
 import './ClientesList.css'
 import { ClienteService } from '../services/api'
 
@@ -13,6 +14,21 @@ const ClientesList = () => {
   const [clientes, setClientes] = useState<Cliente[]>([])
   const [perPage, setPerPage] = useState(16)
   const [page, setPage] = useState(1)
+  const [modalOpen, setModalOpen] = useState(false)
+  const handleCreateCliente = async (novoCliente: {
+    name: string
+    salary: number
+    companyValuation: number
+    }) => {
+    try {
+        await ClienteService.criar(novoCliente)
+        // Recarrega a lista após criação
+        const res = await ClienteService.listar()
+        setClientes(res.data.clients)
+        } catch (err) {
+            console.error('Erro ao criar cliente:', err)
+        }
+    }
 
   useEffect(() => {
     ClienteService.listar()
@@ -26,7 +42,6 @@ const ClientesList = () => {
       currency: 'BRL',
       minimumFractionDigits: 2,
     })
-
   // Paginação
   const totalPages = Math.ceil(clientes.length / perPage)
   const startIdx = (page - 1) * perPage
@@ -79,7 +94,7 @@ const ClientesList = () => {
 
       {/* Rodapé */}
       <div className="clientes-footer">
-        <button className="criar-btn"><b>Criar cliente</b></button>
+        <button className="criar-btn" onClick={() => setModalOpen(true)}><b>Criar cliente</b></button>
         <div className="paginacao">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
             <button
@@ -92,6 +107,13 @@ const ClientesList = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal de criar cliente */}
+      <CriarClienteModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        onSave={handleCreateCliente}
+      />
     </div>
   )
 }

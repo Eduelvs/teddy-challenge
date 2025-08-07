@@ -1,0 +1,104 @@
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modal-content h2 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.modal-content .cancelar {
+  align-self: flex-end;
+  margin-bottom: -0.3rem;
+  margin-top: -0.5rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40rem;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.3rem;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border 0.2s;
+}
+.modal-content input:focus {
+  border: 1.5px solid #ff9800;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.modal-actions .salvar {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.modal-actions .salvar:hover {
+  background: #fb8c00;
+}
+
+.cancelar {
+  background: transparent;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: auto;
+}
+.cancelar:hover {
+  background: #ddd;
+}
