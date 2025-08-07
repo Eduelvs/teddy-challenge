@@ -19,6 +19,8 @@ const ClientesList = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [editModalOpen, setEditModalOpen] = useState(false)
   const [clienteEdit, setClienteEdit] = useState<Cliente | null>(null)
+  const selecionados = JSON.parse(localStorage.getItem('clientesSelecionados') || '[]');
+
   const handleCreateCliente = async (novoCliente: { name: string; salary: number; companyValuation: number }) => {
     try {
       await ClienteService.criar(novoCliente)
@@ -31,6 +33,7 @@ const ClientesList = () => {
   }
 
   const [showDeleteSuccess, setShowDeleteSuccess] = useState(false)
+  const [showSelectSuccess, setShowSelectSuccess] = useState(false)
   const excluirCliente = async (id: number) => {
     try {
       await ClienteService.excluir(id.toString())
@@ -86,13 +89,26 @@ const ClientesList = () => {
 
       {/* Grid de cards */}
       <div className="clientes-grid">
-        {clientesPage.map(cliente => (
-          <div className="cliente-card" key={cliente.id}>
+        {clientesPage.map(cliente => {
+          const isSelecionado = selecionados.includes(cliente.id);
+        return (
+          <div className={`cliente-card ${isSelecionado ? 'selecionado' : ''}`} key={cliente.id}>
             <h2>{cliente.name}</h2>
             <p>Salário: {formatCurrency(cliente.salary)}</p>
             <p>Empresa: {formatCurrency(cliente.companyValuation)}</p>
             <div className="card-actions">
-              <button title="Selecionar">
+              <button
+                title="Selecionar"
+                onClick={() => {
+                  const selecionados = JSON.parse(localStorage.getItem('clientesSelecionados') || '[]');
+                  if (!selecionados.includes(cliente.id)) {
+                    selecionados.push(cliente.id);
+                    localStorage.setItem('clientesSelecionados', JSON.stringify(selecionados));
+                    setShowSelectSuccess(true);
+                    setTimeout(() => setShowSelectSuccess(false), 1200);
+                  }
+                }}
+              >
                 <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
               </button>
               <button title="Editar" onClick={() => {
@@ -106,7 +122,7 @@ const ClientesList = () => {
               </button>
             </div>
           </div>
-        ))}
+        )})}
       </div>
 
       {/* Rodapé */}
@@ -132,6 +148,7 @@ const ClientesList = () => {
         onSave={handleCreateCliente}
       />
       <SuccessPopup show={showDeleteSuccess} message="Cliente deletado com sucesso!" onClose={() => setShowDeleteSuccess(false)} />
+      <SuccessPopup show={showSelectSuccess} message="Cliente selecionado com sucesso!" onClose={() => setShowSelectSuccess(false)} />
       <EditClienteModal
         isOpen={editModalOpen}
         onClose={() => setEditModalOpen(false)}
