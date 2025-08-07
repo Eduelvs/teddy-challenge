@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage'
 
 // o microfrontend clientes será montado em tempo de execução
 const ClientesPage = React.lazy(() => import('../../../clientes/src/pages/ClientesApp'))
+const ClientesSelectPage = React.lazy(() => import('../../../clientes/src/pages/ClientesApp2'))
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,14 @@ export const router = createBrowserRouter([
     element: (
       <React.Suspense fallback={<div>Carregando clientes...</div>}>
         <ClientesPage />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: '/selecionados',
+    element: (
+      <React.Suspense fallback={<div>Carregando clientes selecionados...</div>}>
+        <ClientesSelectPage />
       </React.Suspense>
     ),
   },

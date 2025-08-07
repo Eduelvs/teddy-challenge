@@ -20,9 +20,9 @@ const Header = () => {
         <img src={teddyLogo} alt="Logo Teddy" className="header-logo" />
         <nav className="header-tabs">
           <ul>
-            <li><a href="#">Clientes</a></li>
-            <li><a href="#">Clientes Selecionados</a></li>
-            <li><a href="#">Sair</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/selecionados">Clientes Selecionados</a></li>
+            <li><a href="/">Sair</a></li>
           </ul>
         </nav>
         <span className="header-username">
