@@ -1,0 +1,108 @@
+
+.clientes-container {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-top: 2rem;
+  font-family: sans-serif;
+}
+
+.clientes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.clientes-header p {
+  color: #000000;
+}
+.clientes-header label {
+  color: #000000;
+}
+
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cliente-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  background: #ffffff;
+}
+
+.cliente-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+.cliente-card p {
+  margin: 0.5rem 0;
+  color: rgb(0, 0, 0);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.clientes-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.criar-btn {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid #f97316;
+  color: #f97316;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.criar-btn:hover {
+  background: #fff7f0;
+}
+
+.paginacao {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.paginacao button {
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.paginacao button.active {
+  background: #f97316;
+  color: rgb(0, 0, 0);
+}
+
+select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: white;
+  font-size: 14px;
+  border-radius: 4px;
+}

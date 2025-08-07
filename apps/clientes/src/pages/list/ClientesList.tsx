@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import SuccessPopup from '../components/SuccessPopup'
-import CriarClienteModal from '../components/CreateClienteModal'
-import EditClienteModal from '../components/EditClienteModal'
+import SuccessPopup from '../../components/SuccessPopup'
+import CriarClienteModal from '../../components/CreateClienteModal'
+import EditClienteModal from '../../components/EditClienteModal'
 import './ClientesList.css'
-import { ClienteService } from '../services/api'
+import { ClienteService } from '../../services/api'
 
 type Cliente = {
   id: number

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import './ClientesList.css'
-import { ClienteService } from '../services/api'
+import { ClienteService } from '../../services/api'
+import './ClientesSelect.css'
 
 type Cliente = {
   id: number

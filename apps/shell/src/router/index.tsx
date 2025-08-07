@@ -3,8 +3,8 @@ import { createBrowserRouter } from 'react-router-dom'
 import LoginPage from '../pages/LoginPage'
 
 // o microfrontend clientes será montado em tempo de execução
-const ClientesPage = React.lazy(() => import('../../../clientes/src/pages/ClientesApp'))
-const ClientesSelectPage = React.lazy(() => import('../../../clientes/src/pages/ClientesApp2'))
+const ClientesPage = React.lazy(() => import('../../../clientes/src/pages/list/ClientesApp'))
+const ClientesSelectPage = React.lazy(() => import('../../../clientes/src/pages/select/ClientesApp'))
 
 export const router = createBrowserRouter([
   {
