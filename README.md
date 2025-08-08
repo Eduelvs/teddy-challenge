@@ -9,9 +9,12 @@ teddy-challenge/
 ├── apps/
 │   ├── shell/       # App principal (login e roteamento)
 │   └── clientes/    # Microfrontend com CRUD de clientes
-├── packages/
-│   └── ui/          # (opcional) Design system compartilhado
 ├── pnpm-workspace.yaml
+├── Dockerfile
+├── vercel.json
+├── eslint.config.js
+├── ...
+├── .prettierrc
 └── package.json
 ````
 
@@ -23,7 +26,8 @@ teddy-challenge/
 * pnpm workspaces
 * Axios
 * Docker (para containerização)
-* Tailwind CSS
+* CSS
+* Tailwind CSS (Não utilizado, mas instalado)
 * React Router DOM
 * Vercel (para deploy)
 * Conventional Commits
