@@ -27,6 +27,8 @@ teddy-challenge/
 * React Router DOM
 * Vercel (para deploy)
 * Conventional Commits
+* ESLint e Prettier (para formatação e linting de código)
+
 
 ## 🧭 Como rodar o projeto localmente
 
@@ -113,14 +115,19 @@ Este projeto segue o padrão Conventional Commits, utilize os prefixos:
 * Deploy na Vercel
 * Estrutura de micro frontends
 * Roteamento SPA com fallback para Vercel
-
-### 🚧 Em andamento
-
 * Testes unitários
 * Testes end-to-end
+* Configuração de ESLint e Prettier
+
 
 ### ❓ O que falta
 * Adicionar mais micro frontends
+* Adicionar Husky e Commitlint (para garantir padrão de commits)
+* React Query (para gerenciamento de estado e cache)
+* Zustand (para gerenciamento de estado)
+* Yup (para validação de formulários)
+* React Helmet (para SEO)
+* React Testing Library (para testes de componentes)
 
 ## 📝 Contribuindo
 Se você quiser contribuir, sinta-se à vontade para abrir issues ou pull requests. Toda ajuda é bem-vinda!
