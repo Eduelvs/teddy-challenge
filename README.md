@@ -28,6 +28,7 @@ teddy-challenge/
 * Vercel (para deploy)
 * Conventional Commits
 * ESLint e Prettier (para formatação e linting de código)
+* Vitest (para testes unitários)
 
 
 ## 🧭 Como rodar o projeto localmente
@@ -116,12 +117,12 @@ Este projeto segue o padrão Conventional Commits, utilize os prefixos:
 * Estrutura de micro frontends
 * Roteamento SPA com fallback para Vercel
 * Testes unitários
-* Testes end-to-end
 * Configuração de ESLint e Prettier
 
 
 ### ❓ O que falta
 * Adicionar mais micro frontends
+* Adicionar teste end-to-end
 * Adicionar Husky e Commitlint (para garantir padrão de commits)
 * React Query (para gerenciamento de estado e cache)
 * Zustand (para gerenciamento de estado)
